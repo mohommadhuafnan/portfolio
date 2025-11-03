@@ -65,12 +65,15 @@
                 transform: translateY(0) translateX(0);
                 opacity: 0;
             }
+
             10% {
                 opacity: 1;
             }
+
             90% {
                 opacity: 1;
             }
+
             100% {
                 transform: translateY(-100vh) translateX(100px);
                 opacity: 0;
@@ -81,9 +84,11 @@
             0% {
                 background-position: 0% 50%;
             }
+
             50% {
                 background-position: 100% 50%;
             }
+
             100% {
                 background-position: 0% 50%;
             }
@@ -152,9 +157,11 @@
             0% {
                 box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
             }
+
             70% {
                 box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
             }
+
             100% {
                 box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
             }
@@ -264,9 +271,11 @@
             0% {
                 box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4);
             }
+
             50% {
                 box-shadow: 0 4px 25px rgba(255, 65, 108, 0.8);
             }
+
             100% {
                 box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4);
             }
@@ -368,9 +377,12 @@
         }
 
         @keyframes blink {
-            0%, 100% {
+
+            0%,
+            100% {
                 opacity: 1;
             }
+
             50% {
                 opacity: 0;
             }
@@ -422,9 +434,11 @@
                 background-position: 0% 50%;
                 transform: rotate(0deg);
             }
+
             50% {
                 background-position: 100% 50%;
             }
+
             100% {
                 background-position: 0% 50%;
                 transform: rotate(360deg);
@@ -435,15 +449,19 @@
             0% {
                 box-shadow: 0 0 20px rgba(255, 65, 108, 0.5);
             }
+
             25% {
                 box-shadow: 0 0 30px rgba(76, 201, 240, 0.5);
             }
+
             50% {
                 box-shadow: 0 0 40px rgba(67, 97, 238, 0.5);
             }
+
             75% {
                 box-shadow: 0 0 30px rgba(114, 9, 183, 0.5);
             }
+
             100% {
                 box-shadow: 0 0 20px rgba(255, 75, 43, 0.5);
             }
@@ -453,6 +471,7 @@
             0% {
                 transform: scale(1);
             }
+
             100% {
                 transform: scale(1.05);
             }
@@ -1169,6 +1188,7 @@
             0% {
                 transform: translateX(-100%);
             }
+
             100% {
                 transform: translateX(100%);
             }
@@ -1307,7 +1327,7 @@
             html {
                 font-size: 15px;
             }
-            
+
             .Header {
                 flex-direction: column-reverse;
                 text-align: center;
@@ -1340,7 +1360,7 @@
             html {
                 font-size: 14px;
             }
-            
+
             .nav {
                 position: relative;
                 padding: 10px 50px 10px 20px;
@@ -1398,16 +1418,52 @@
             .newsletter-form {
                 flex-direction: column;
             }
-            
+
             .whatsapp-float {
                 width: 50px;
                 height: 50px;
                 bottom: 90px;
-                left: 20px;
+                left: auto;
+                right: 5px;
             }
-            
+
             .whatsapp-float i {
                 font-size: 1.5rem;
+            }
+            
+            
+        }
+
+        /* Additional fix for very small screens */
+        @media (max-width: 480px) {
+            .Header,
+            .About,
+            .Skills,
+            .Education,
+            .Achievements,
+            .YouTube,
+            .Contact,
+            .footer {
+                padding: 20px;
+                margin-top: 80px;
+            }
+            
+            .section01 .name h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section01 .name h2 {
+                font-size: 1.2rem;
+            }
+            
+            .Section02 img {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .Section02::before {
+                width: 220px;
+                height: 220px;
             }
         }
     </style>
@@ -1452,7 +1508,7 @@
         <section class="Header" id="home">
             <div class="section01">
                 <div class="name">
-                    <h1><span class="i-am">I Am</span> <span class="mohammed">Mohammed</span></h1>
+                    <h1><span class="i-am">I Am</span> <span class="mohammed">Abdullah</span></h1>
                     <h2><span class="i-am-a">I Am a </span><span id="typing-text" class="typing-text">Motivated by
                             challenges</span></h2>
                 </div>
@@ -1467,8 +1523,7 @@
                 </div>
             </div>
             <div class="Section02">
-                <img src="images/profilepic.jpg"
-                    alt="profile pic">
+                <img src="images/profilepic.jpg" alt="profile pic">
             </div>
         </section>
 
@@ -1478,10 +1533,10 @@
             <div class="About-content">
                 <div class="Aboutsection1">
                     <p>
-                        I don't just dream of seeing the world — I aim to live in a way that makes the world take
+                        I don't just dream of seeing the world I aim to live in a way that makes the world take
                         notice.
                         I believe in creating, inspiring, and leaving a mark that speaks louder than words.
-                        Every challenge I face is a chance to grow stronger and shine brighter.
+                        Every challenge I face is a chance to grow stronger and shine brighter. <br><br><br>
                         My goal isn't to follow trends, but to set them.
                         I want my work and my journey to tell a story of passion, creativity, and purpose.
                         The world may be vast, but I'm determined to make my name stand out in it.
@@ -1489,12 +1544,9 @@
                     </p>
                 </div>
                 <div class="aboutsection2">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80"
-                        alt="Teamwork" class="active">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                        alt="Coding">
-                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                        alt="Creative">
+                    <img src="images/aboutimage/aboutimage01.jpg" alt="Teamwork" class="active">
+                    <img src="images/aboutimage/aboutimage02.jpg" alt="Coding">
+                    <img src="images/aboutimage/aboutimage03.jpg" alt="Creative">
                 </div>
             </div>
         </section>
@@ -1504,24 +1556,24 @@
             <h1>My Skills</h1>
             <div class="skills-container">
                 <div class="skill">
-                    <i class="fas fa-code"></i>
-                    <h3>Web Development</h3>
-                    <p>Building responsive and interactive websites using modern technologies.</p>
+                    <i class="fa-solid fa-book-quran"></i>
+                    <h3>Completed 30 Juz of the Holy Qur'an</h3>
+                    <p>Demonstrating dedication, discipline, and strong memorization skills.</p>
                 </div>
                 <div class="skill">
-                    <i class="fas fa-palette"></i>
-                    <h3>UI/UX Design</h3>
-                    <p>Creating intuitive and visually appealing user interfaces and experiences.</p>
+                    <i class="fa-brands fa-youtube"></i>
+                    <h3>YouTube Coaching (5 Years of Experience)</h3>
+                    <p>Skilled in content creation, audience engagement, and digital mentoring.</p>
                 </div>
                 <div class="skill">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Mobile Development</h3>
-                    <p>Developing cross-platform mobile applications with native performance.</p>
+                    <i class="fa-solid fa-volume-high"></i>
+                    <h3>Motivational Speaker</h3>
+                    <p>Experienced in inspiring and guiding others through powerful and positive communication.</p>
                 </div>
                 <div class="skill">
-                    <i class="fas fa-database"></i>
-                    <h3>Database Management</h3>
-                    <p>Designing and optimizing databases for performance and scalability.</p>
+                    <i class="fa-solid fa-braille"></i>
+                    <h3>Braille Literacy (English, Tamil, Sinhala, Arabic)</h3>
+                    <p>Proficient in reading and writing Braille across multiple languages.</p>
                 </div>
             </div>
         </section>
@@ -1555,36 +1607,37 @@
             <div class="achievements-container">
                 <div class="achievement">
                     <div class="achievement-img">
-                        <img src="https://images.unsplash.com/photo-1568992688065-536aad8a12f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80"
-                            alt="Award 1">
+                        <img src="images/aboutimage/aboutimage02.jpg" alt="Award 1">
                     </div>
                     <div class="achievement-content">
-                        <h3>Best Developer Award 2022</h3>
-                        <p>Received the prestigious Best Developer Award for innovative solutions in web development.
+                        <h3>Inspiring Journey Award 2025</h3>
+                        <p>Celebrated for transforming challenges into strength and motivating others to believe in
+                            their potential through passion, resilience, and dedication.
                         </p>
                         <a href="#" class="learn-more" data-modal="modal1">Learn More</a>
                     </div>
                 </div>
                 <div class="achievement">
                     <div class="achievement-img">
-                        <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
-                            alt="Award 2">
+                        <img src="images/aboutimage/aboutimage03.jpg" alt="Award 2">
                     </div>
                     <div class="achievement-content">
-                        <h3>Innovation Excellence</h3>
-                        <p>Recognized for outstanding innovation in mobile application development and user experience
-                            design.</p>
+                        <h3>Inspirational Life Journey Recognition 2025</h3>
+                        <p>Honored for sharing my life story that inspired many to overcome challenges with faith,
+                            patience, and determination. My journey reminds others that true strength lies not in sight,
+                            but in vision and belief.</p>
                         <a href="#" class="learn-more" data-modal="modal2">Learn More</a>
                     </div>
                 </div>
                 <div class="achievement">
                     <div class="achievement-img">
-                        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                            alt="Award 3">
+                        <img src="images/aboutimage/aboutimage01.jpg" alt="Award 3">
                     </div>
                     <div class="achievement-content">
-                        <h3>Leadership Award</h3>
-                        <p>Awarded for exceptional leadership in managing cross-functional teams and delivering
+                        <h3>Guest Speaker – Uva Community Radio</h3>
+                        <p>Invited to share my journey on the "Nenjam Marappathillai" program, discussing life as a
+                            visually impaired person, learning through Braille, and memorizing the Qur'an without sight.
+                            Inspired listeners to believe in their strength and purpose.
                             successful projects.</p>
                         <a href="#" class="learn-more" data-modal="modal3">Learn More</a>
                     </div>
@@ -1656,7 +1709,8 @@
 
             </div>
             <div class="see-more-container">
-                <a href="https://youtube.com/@islamictvmedia_abdullah" class="see-more" target="_blank">Visit My Channel</a>
+                <a href="https://youtube.com/@islamictvmedia_abdullah" class="see-more" target="_blank">Visit My
+                    Channel</a>
             </div>
         </section>
 
@@ -1669,7 +1723,9 @@
                         <i class="fab fa-whatsapp whatsapp"></i>
                         <div>
                             <h3>WhatsApp</h3>
-                            <p><a href="https://wa.me/94772117131?text=Hello%20I%20am%20interested%20in%20your%20services">+94 77 211 7131</a></p>
+                            <p><a
+                                    href="https://wa.me/94772117131?text=Hello%20I%20am%20interested%20in%20your%20services">+94
+                                    77 211 7131</a></p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1756,7 +1812,8 @@
                 <div class="footer-section">
                     <h3>Follow Me</h3>
                     <div class="social-links">
-                        <a href="https://wa.me/94772117131?text=Hello%20I%20am%20interested%20in%20your%20services" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/94772117131?text=Hello%20I%20am%20interested%20in%20your%20services"
+                            target="_blank"><i class="fab fa-whatsapp"></i></a>
                         <a href="https://youtube.com/@islamictvmedia_abdullah" target="_blank"><i
                                 class="fab fa-youtube"></i></a>
                         <a href="https://www.instagram.com/a.a.m.abdullahofficial" target="_blank"><i
@@ -1788,7 +1845,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Mohammed's Portfolio. All rights reserved.</p>
+                <p>&copy; 2025 Mohommadhu Afnan. All rights reserved.</p>
                 <p>Designed with passion and creativity</p>
             </div>
         </section>
@@ -1799,18 +1856,21 @@
         <div class="modal-content">
             <span class="close-modal">&times;</span>
             <div class="modal-img">
-                <img src="https://images.unsplash.com/photo-1568992688065-536aad8a12f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80"
-                    alt="Award 1">
+                <img src="images/aboutimage/aboutimage02.jpg" alt="Award 1">
             </div>
-            <h2>Best Developer Award 2022</h2>
-            <p>This prestigious award recognizes exceptional talent and innovation in the field of web development. I
-                was honored to receive this award for my groundbreaking work on a revolutionary e-commerce platform that
-                transformed the online shopping experience for thousands of users.</p>
-            <p>The project involved developing a highly scalable and responsive web application using cutting-edge
-                technologies like React, Node.js, and MongoDB. The platform featured advanced personalization algorithms
-                that increased user engagement by 45% and reduced bounce rates by 30%.</p>
-            <p>This achievement represents my commitment to pushing the boundaries of what's possible in web development
-                and creating solutions that make a real difference in people's lives.</p>
+            <h2>Inspiring Journey Award 2025</h2>
+            <p>The award presented by Bandaranaike Memorial Hall – "Rise of Academy" is not just a recognition. It is a
+                beautiful reminder of every challenge and every struggle I have faced—from my school days to this very
+                moment.</p>
+            <p>I may not have seen the world with my eyes, but my parents never stopped me from seeing my dreams. The
+                fact that I have no eyesight is not a limitation; it is a part of my life that I have fully accepted. My
+                first victory was that my parents never confined me to a corner—they gave me the courage to live freely.
+            </p>
+            <p>This success is not mine alone; it belongs equally to my parents and my family, who stood by me and
+                believed in me every step of the way. I dedicate this achievement to all those who never gave up on me,
+                who prayed for me, who encouraged me when others said, "You can't do it," and reminded me instead, "You
+                are not ordinary—you were born to achieve, and yes, you can do it."</p>
+            <p>This award is a milestone in my life's journey. It is not the end—it is a new beginning.</p>
         </div>
     </div>
 
@@ -1818,19 +1878,19 @@
         <div class="modal-content">
             <span class="close-modal">&times;</span>
             <div class="modal-img">
-                <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
-                    alt="Award 2">
+                <img src="images/aboutimage/aboutimage03.jpg" alt="Award 2">
             </div>
-            <h2>Innovation Excellence</h2>
-            <p>This recognition celebrates my innovative approach to mobile application development and user experience
-                design. I was acknowledged for creating a mobile app that seamlessly integrated augmented reality
-                technology to enhance the retail shopping experience.</p>
-            <p>The application allowed users to virtually try on clothing and accessories using their smartphone
-                cameras, significantly reducing return rates and increasing customer satisfaction. The app utilized
-                machine learning algorithms to provide accurate size recommendations and style suggestions based on user
-                preferences.</p>
-            <p>This innovation not only improved the shopping experience but also demonstrated how technology can bridge
-                the gap between physical and digital retail environments.</p>
+            <h2>Inspirational Life Journey Recognition 2025</h2>
+            <p>In life, sometimes what we expect doesn't happen, and what we never expect happens in the most surprising
+                ways. The same happened in my life — a beautiful, unforgettable experience.</p>
+            <p>Alhamdulillah! <br>
+                An unexpected invitation,
+                a crowd filled with excitement,<br>
+                a warm and heartfelt welcome…<br></p>
+            <p>But above all, what truly touched my heart was the genuine love and affection shown by the wonderful people of that place — their kindness and warmth made the moment even more special and memorable.</p>
+            <p>It wasn't just an event; it was a reminder that every step we take with sincerity reaches hearts beyond what we can imagine. The smiles, the prayers, and the encouraging words I received reminded me that kindness and faith can build bridges stronger than any obstacle.</p>
+            <p>Each moment of that day reminded me that Allah's plans are far more beautiful than our expectations. What seemed like a simple invitation turned into a moment of reflection, gratitude, and deep connection with people who truly care.</p>
+            <p>I left that place with my heart filled with peace, inspiration, and renewed motivation to continue spreading positivity, faith, and hope — believing once again that every encounter in life has a purpose written by Allah Himself.</p>
         </div>
     </div>
 
@@ -1838,20 +1898,18 @@
         <div class="modal-content">
             <span class="close-modal">&times;</span>
             <div class="modal-img">
-                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                    alt="Award 3">
+                <img src="images/aboutimage/aboutimage01.jpg" alt="Award 3">
             </div>
-            <h2>Leadership Award</h2>
-            <p>This award recognizes exceptional leadership in managing cross-functional teams and delivering successful
-                projects. I was honored for my role in leading a diverse team of developers, designers, and product
-                managers to successfully launch a complex enterprise software solution ahead of schedule and under
-                budget.</p>
-            <p>My leadership approach focused on fostering collaboration, encouraging innovation, and creating an
-                environment where every team member could contribute their best work. Through effective communication
-                and strategic planning, we were able to overcome significant technical challenges and deliver a product
-                that exceeded client expectations.</p>
-            <p>This achievement highlights my ability to not only excel as an individual contributor but also to inspire
-                and guide teams toward achieving remarkable results.</p>
+            <h2>Guest Speaker – Uva Community Radio</h2>
+            <p>This is Abdullah. I am truly delighted to have participated in the "Nenjam Marappathillai" program aired
+                by Uva Community Radio. I sincerely thank the program's producer and the Uva Community Radio team for
+                giving me this valuable opportunity.</p>
+            <p>As a person with visual impairment, I spoke about the challenges faced by individuals who are blind, how
+                we study through the Braille system, and how I memorized the Qur'an without sight. I also answered
+                questions about how society perceives us and what we hope for in the future.</p>
+            <p>In particular, I discussed how people with visual impairments can live with confidence and independence.
+                I hope this video will help share my experiences and insights with others, inspiring more understanding
+                and motivation within our community.</p>
         </div>
     </div>
 
@@ -1860,28 +1918,28 @@
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
             const particleCount = 50;
-            
+
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.classList.add('particle');
-                
+
                 // Random size
                 const size = Math.random() * 10 + 2;
                 particle.style.width = `${size}px`;
                 particle.style.height = `${size}px`;
-                
+
                 // Random position
                 particle.style.left = `${Math.random() * 100}%`;
                 particle.style.top = `${Math.random() * 100}%`;
-                
+
                 // Random animation duration
                 const duration = Math.random() * 20 + 10;
                 particle.style.animationDuration = `${duration}s`;
-                
+
                 // Random animation delay
                 const delay = Math.random() * 5;
                 particle.style.animationDelay = `${delay}s`;
-                
+
                 particlesContainer.appendChild(particle);
             }
         }
@@ -1957,7 +2015,7 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
-                        
+
                         // Add individual animations to elements inside sections
                         if (entry.target.classList.contains('Skills')) {
                             const skills = entry.target.querySelectorAll('.skill');
@@ -1967,7 +2025,7 @@
                                 }, index * 200);
                             });
                         }
-                        
+
                         if (entry.target.classList.contains('Education')) {
                             const educationItems = entry.target.querySelectorAll('.education-item');
                             educationItems.forEach((item, index) => {
@@ -1976,7 +2034,7 @@
                                 }, index * 200);
                             });
                         }
-                        
+
                         if (entry.target.classList.contains('Achievements')) {
                             const achievements = entry.target.querySelectorAll('.achievement');
                             achievements.forEach((achievement, index) => {
@@ -1985,7 +2043,7 @@
                                 }, index * 200);
                             });
                         }
-                        
+
                         if (entry.target.classList.contains('YouTube')) {
                             const videos = entry.target.querySelectorAll('.youtube-video');
                             videos.forEach((video, index) => {
@@ -1994,7 +2052,7 @@
                                 }, index * 200);
                             });
                         }
-                        
+
                         if (entry.target.classList.contains('Contact')) {
                             const contactItems = entry.target.querySelectorAll('.contact-item');
                             contactItems.forEach((item, index) => {
@@ -2094,7 +2152,7 @@
 
             window.addEventListener('scroll', () => {
                 const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                
+
                 if (scrollTop > lastScrollTop && scrollTop > 200) {
                     // Scrolling down
                     navbar.classList.add('hidden');
@@ -2102,22 +2160,22 @@
                     // Scrolling up
                     navbar.classList.remove('hidden');
                 }
-                
+
                 lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
             });
 
             // Active nav link on scroll
             const sectionsForNav = document.querySelectorAll('section[id]');
-            
+
             function updateActiveNavLink() {
                 const scrollY = window.pageYOffset;
-                
+
                 sectionsForNav.forEach(section => {
                     const sectionHeight = section.offsetHeight;
                     const sectionTop = section.offsetTop - 100;
                     const sectionId = section.getAttribute('id');
                     const navLink = document.querySelector(`.nav ul li a[href="#${sectionId}"]`);
-                    
+
                     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
                         navLink.classList.add('active');
                     } else {
@@ -2125,7 +2183,7 @@
                     }
                 });
             }
-            
+
             window.addEventListener('scroll', updateActiveNavLink);
         });
     </script>
